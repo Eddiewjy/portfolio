@@ -2,9 +2,12 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import toast from "react-hot-toast";
+import { sendEmail } from "@/actions/sendEmail";
+import SubmitBtn from "./submit-btn";
+
 
 export default function Contact() {
     const { ref } = useSectionInView("Contact");
@@ -13,6 +16,7 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
+      ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
@@ -23,7 +27,6 @@ export default function Contact() {
       transition={{
         duration: 1,
       }}
-      
     >
       <SectionHeading>Contact me</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
@@ -31,16 +34,26 @@ export default function Contact() {
         <a
           className=" underline"
           href="
-           mailto:3040953216@qq.com"
+           mailto:eddiewu41@gmail.com"
         >
-          3040953216@qq.com
+          eddiewu41@gmail.com
         </a>{" "}
         or fill out the form below.
       </p>
 
-      <form className="mt-10 flex flex-col dark:text-black">
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+            return;
+          }
+          toast.success("Email sent successfully!");
+        }}
+      >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg border-black dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           type="email"
           placeholder="Your email"
           required
@@ -49,11 +62,12 @@ export default function Contact() {
         />
         <textarea
           placeholder="Your message"
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg border-black p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
           required
-          maxLength={5000}
+          maxLength={500}
         />
+        <SubmitBtn />
       </form>
     </motion.section>
   );
