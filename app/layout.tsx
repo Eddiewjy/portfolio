@@ -5,6 +5,7 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
+import ThemeSwitch from "@/components/theme-switch";
 
 
 
@@ -34,7 +35,8 @@ export default function RootLayout({
             <Header />
             {children}
             <Toaster position="top-center" />
-            <Footer/>
+            <Footer />
+            <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
