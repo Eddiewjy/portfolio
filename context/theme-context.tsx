@@ -5,7 +5,7 @@ import React, { useEffect, useState, createContext, useContext } from "react";
 type Theme = "light" | "dark";
 
 type ThemeContextProviderProps = {
-  children: React.ReactNode;
+  children: React.ReactNode; //定义children属性
 };
 
 type ThemeContextType = {
@@ -67,4 +67,4 @@ export function useTheme() {
   }
 
   return context;
-}
+} //自定义theme钩子，用于获取主题上下文
