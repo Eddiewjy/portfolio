@@ -62,23 +62,23 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "mundo社区",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+            "作为mundu社区的前端开发人员，我目前负责构建客服系统，与后端人员对接，实现包括常见问题展示，客服实时对话，ai问答等功能",
+        tags: ["React", "Vite", "TailwindCSS","shadCN","Apifox"],
         imageUrl: corpcommentImg,
     },
     {
-        title: "rmtDev",
+        title: "待完善",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+            "准备中",
         tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
         imageUrl: rmtdevImg,
     },
     {
-        title: "Word Analytics",
+        title: "待完善",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+            "准备中",
         tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
         imageUrl: wordanalyticsImg,
     },
@@ -86,7 +86,7 @@ export const projectsData = [
 
 export const skillsData = [
     "HTML",
-    "CSS",
+    "Tailwind CSS",
     "JavaScript",
     "TypeScript",
     "React",
@@ -94,11 +94,10 @@ export const skillsData = [
     "Node.js",
     "Vite",
     "Git",
-    "Tailwind",
-    "Python",
-    "PyTorch",
     "Apifox",
     "Framer Motion",
     "ShadCN",
     "Magic UI",
+    "Python",
+    "PyTorch",
 ] as const;

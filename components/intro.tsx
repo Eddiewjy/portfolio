@@ -50,33 +50,35 @@ export default function Intro() {
               ease: "linear", // 平滑运动
             }}
           >
-            <motion.span className="absolute -bottom-2  text-2xl rotate-0">
+            <motion.span className="absolute text-2xl rotate-0 -bottom-2">
               🫡
             </motion.span>
-            <motion.span className="absolute -top-2  text-xl rotate-180">
+            <motion.span className="absolute text-xl rotate-180 -top-2">
               😘
             </motion.span>
           </motion.div>
         </div>
       </div>
-      <CardContainer className="inter-var w-full sm:w-[40rem] h-auto">
-        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full sm:w-[30rem] h-auto rounded-xl p-5 border  ">
-          <CardItem
-            translateZ="50"
-            className="text-lg  text-neutral-600 dark:text-white "
-          >
-            <motion.p
-              className="mb-10 mt-4 px-4 !text-2xl font-medium !leading-[1.5] !sm:text-4xl"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+      <CardContainer className="inter-var sm:w-[40rem] h-auto">
+        <CardBody className="bg-gray-50  group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full sm:w-[30rem] h-auto rounded-xl p-5 border flex-col ">
+          <div className="flex justify-center items-center">
+            <CardItem
+              translateZ="100"
+              className="flex  justify-center text-lg text-center text-neutral-600 dark:text-white  max-w-full "
             >
-              <span className="font-bold">
-                Hello, I'm Eddie <br/>
-                a beginner in frontend development.
-              </span>
-            </motion.p>
-          </CardItem>
+              <motion.div
+                className="mt-2  text-xl font-medium leading-[1.5] sm:text-2xl  text-center items-center justify-center flex flex-col w-full "
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="text-xl font-medium leading-[1.5] sm:text-2xl ">
+                  <span className="block font-bold">Hello, 我是 Eddie</span>
+                  <span className="block font-bold">一个前端初学者。</span>
+                </p>
+              </motion.div>
+            </CardItem>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -85,18 +87,18 @@ export default function Intro() {
           >
             <CardItem
               translateZ="30"
-              className="max-w-full flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium mt-5"
+              className="flex justify-center max-w-full gap-4 px-4 mt-5 text-lg font-medium items-enter sm:flex-row "
             >
               <Link
                 href="#contact"
-                className="group bg-[#eded04] text-[#6c2ba5] px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition text-sm"
+                className="group bg-[#eded04] text-[#6c2ba5] px-7 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition text-sm dark:bg-white/10"
                 onClick={() => {
                   setActiveSection("Contact");
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                Contact me!
-                <BsArrowRight className="opacity-70 group-hover:translate-x-3 transition" />
+                Contact me
+                <BsArrowRight className="transition opacity-70 group-hover:translate-x-3" />
               </Link>
 
               <a
@@ -105,11 +107,11 @@ export default function Intro() {
                 download
               >
                 Download CV{" "}
-                <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
               </a>
 
               <a
-                className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                className=" p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
                 href="https://github.com/Eddiewjy"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -8,10 +8,8 @@ import toast from "react-hot-toast";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 
-
 export default function Contact() {
-    const { ref } = useSectionInView("Contact");
-
+  const { ref } = useSectionInView("Contact");
 
   return (
     <motion.section
@@ -29,10 +27,10 @@ export default function Contact() {
       }}
     >
       <SectionHeading>Contact me</SectionHeading>
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="-mt-6 text-white dark:text-gray-500">
         Please Contact me at{" "}
         <a
-          className=" underline"
+          className="underline "
           href="
            mailto:eddiewu41@gmail.com"
         >
@@ -42,7 +40,7 @@ export default function Contact() {
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="flex flex-col mt-10 dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
@@ -53,7 +51,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg border-black dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="px-4 transition-all rounded-lg h-14 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none"
           type="email"
           placeholder="Your email"
           required
@@ -62,7 +60,7 @@ export default function Contact() {
         />
         <textarea
           placeholder="Your message"
-          className="h-52 my-3 rounded-lg border-black p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="p-4 my-3 transition-all rounded-lg h-52 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none"
           name="message"
           required
           maxLength={500}
