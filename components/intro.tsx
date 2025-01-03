@@ -28,34 +28,9 @@ export default function Intro() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
           >
-            <Avatar className="h-20 w-20 object-cover border-[0.15rem] shadow-xl">
+            <Avatar className="h-32 w-32 object-cover border-[0.15rem] shadow-xl">
               <AvatarImage src="/avatar.jpg" />
             </Avatar>
-          </motion.div>
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            style={{
-              width: "100px", // 环绕轨迹的宽度
-              height: "100px", // 环绕轨迹的高度
-              top: "-10%", // 垂直居中
-              left: "-10%", // 水平居中
-              transformOrigin: "center", // 设置动画中心
-            }}
-            animate={{
-              rotate: 360, // 让环绕轨迹旋转
-            }}
-            transition={{
-              duration: 5, // 动画时间
-              repeat: Infinity, // 无限循环
-              ease: "linear", // 平滑运动
-            }}
-          >
-            <motion.span className="absolute text-2xl rotate-0 -bottom-2">
-              🫡
-            </motion.span>
-            <motion.span className="absolute text-xl rotate-180 -top-2">
-              😘
-            </motion.span>
           </motion.div>
         </div>
       </div>
@@ -73,7 +48,8 @@ export default function Intro() {
                 transition={{ duration: 0.5 }}
               >
                 <p className="text-xl font-medium leading-[1.5] sm:text-2xl ">
-                  <span className="block font-bold">Hello, 我是 Eddie</span>
+                  <span className="block font-bold">Hello👋, 很高兴认识你</span>
+                  <span className="block font-bold">我是 Eddie,</span>
                   <span className="block font-bold">一个前端初学者。</span>
                 </p>
               </motion.div>

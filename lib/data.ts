@@ -35,28 +35,28 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "🏫就读院校",
+        location: "",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "我就读于杭州电子科技大学，主修计算机科学与技术，辅修Chatgpt沟通艺术🤪",
         icon: React.createElement(LuGraduationCap),
-        date: "2019",
+        date: "2023",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
+        title: "🍬Front-End Developer",
+        location: "",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "我是校未央学社的技术部成员之一，负责前端开发和摸鱼🐟，涉及技术包括React, TypeScript, TailwindCSS等",
         icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+        date: "2024-2025",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "🦉Full-Stack Developer",
+        location: "",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "我的终极目标是成为一名全栈开发者，能够对架构做出全面而优雅的设计💫",
         icon: React.createElement(FaReact),
-        date: "2021 - present",
+        date: "nolonger future(I believe)",
     },
 ] as const;
 
