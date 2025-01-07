@@ -28,7 +28,7 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
       <p className="-mt-6 text-white dark:text-gray-500">
-        Please Contact me at{" "}
+        你可以通过{" "}
         <a
           className="underline "
           href="
@@ -36,7 +36,7 @@ export default function Contact() {
         >
           eddiewu41@gmail.com
         </a>{" "}
-        or fill out the form below.
+        联系我，或者填写下面的表单。
       </p>
 
       <form

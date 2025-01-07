@@ -15,13 +15,13 @@ type ActiveSectionContextType = {
 };
 
 export const ActiveSectionContext =
-  createContext<ActiveSectionContextType | null>(null);
+  createContext<ActiveSectionContextType | null>(null);//创建一个上下文对象
 
 export default function ActiveSectionContextProvider({
   children,
-}: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>("Home");
-  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // we need to keep track of this to disable the observer temporarily when user clicks on a link
+}: ActiveSectionContextProviderProps) {//创建一个上下文提供者
+  const [activeSection, setActiveSection] = useState<SectionName>("Home");//用于跟踪当前活动的部分
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // 用于跟踪用户最后一次点击的时间
 
   return (
     <ActiveSectionContext.Provider
@@ -30,7 +30,7 @@ export default function ActiveSectionContextProvider({
         setActiveSection,
         timeOfLastClick,
         setTimeOfLastClick,
-      }}
+      }}//将这四个值传递给子组件
     >
       {children}
     </ActiveSectionContext.Provider>
@@ -38,12 +38,12 @@ export default function ActiveSectionContextProvider({
 }
 
 export function useActiveSectionContext() {
-  const context = useContext(ActiveSectionContext);
+  const context = useContext(ActiveSectionContext);//使用上下文对象
 
   if (context === null) {
     throw new Error(
       "useActiveSectionContext must be used within an ActiveSectionContextProvider"
-    );
+    );//如果上下文对象为空，则抛出错误
   }
 
   return context;

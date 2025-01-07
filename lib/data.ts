@@ -64,7 +64,7 @@ export const projectsData = [
     {
         title: "mundo社区",
         description:
-            "作为mundu社区的前端开发人员，我目前负责构建客服系统，与后端人员对接，实现包括常见问题展示，客服实时对话，ai问答等功能",
+            "作为mundu社区的前端开发人员🧑‍💻，我目前负责构建客服系统，与后端人员对接，实现包括常见问题展示，客服实时对话，ai问答等功能",
         tags: ["React", "Vite", "TailwindCSS","shadCN","Apifox"],
         imageUrl: corpcommentImg,
     },
@@ -79,7 +79,7 @@ export const projectsData = [
         title: "待完善",
         description:
             "准备中",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+        tags: ["React", "Next.js",  "Tailwind"],
         imageUrl: wordanalyticsImg,
     },
 ] as const;

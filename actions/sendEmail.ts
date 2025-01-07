@@ -25,7 +25,7 @@ export const sendEmail = async (formData: FormData) => {
         to: "eddiewu41@gmail.com",
         subject: "Message from contact form",
         replyTo: senderEmail,
-        react: React.createElement(ContactFormEmail, { message: message, senderEmail: senderEmail }),
+        react: React.createElement(ContactFormEmail, { message: message, senderEmail: senderEmail }),//第一个元素是要发送的组件，第二个元素是组件的props
     });
     } catch (error: unknown) {
         return { error: getErrorMessage(error) };
